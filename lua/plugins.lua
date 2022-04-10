@@ -22,8 +22,31 @@ packer.startup({
     use("glepnir/dashboard-nvim")
     -- project
     use("ahmedkhalf/project.nvim")
---treesitter （新增）
+    --treesitter （新增）
     use({ "nvim-treesitter/nvim-treesitter", run = ":TSUpdate" })
+    use({ "neovim/nvim-lspconfig", "williamboman/nvim-lsp-installer" })
+    -- 补全引擎
+    use("hrsh7th/nvim-cmp")
+    
+    -- snippet 引擎
+    use("hrsh7th/vim-vsnip")
+    -- 补全源
+    use("hrsh7th/cmp-vsnip")
+    use("hrsh7th/cmp-nvim-lsp") -- { name = nvim_lsp }
+    use("hrsh7th/cmp-buffer") -- { name = 'buffer' },
+    use("hrsh7th/cmp-path") -- { name = 'path' }
+    use("hrsh7th/cmp-cmdline") -- { name = 'cmdline' }
+
+    -- 常见编程语言代码段
+    use("rafamadriz/friendly-snippets")
+
+    -- ui (新增)
+    use("onsails/lspkind-nvim")
+    use("lukas-reineke/indent-blankline.nvim")
+
+    use("tami5/lspsaga.nvim")
+use({ "jose-elias-alvarez/null-ls.nvim", requires = "nvim-lua/plenary.nvim" })
+
 
   end,
   config = {
